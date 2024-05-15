@@ -72,21 +72,14 @@
     <th>Title</th>
     <th>Body</th>
     <th>Posted on</th>
-    <th>Expired on</th>
+    <th>Expires on</th>
   </tr>
-
+   <% @matching_posts.each do |a_post| %>
     <tr>
-      <td>Lead Advertising Strategist</td>
-      <td>Adhaero ambitus fugiat. Dolorem ocer adhuc. Aut vinco credo.
-
-Calco denuo crinis. Neque tredecim nesciunt. Numquam advenio surgo.
-
-Unde barba annus. Sumo torrens currus. Solutio toties vester.
-
-Civitas atqui amplexus. Aegrotatio delibero termes. Minima coniecto textilis.
-
-Accusamus cilicium vinum. Tamen hic defero. Capitulus tribuo qui.</td>
-      <td>Mar 30, 2024</td>
-      <td>May 11, 2024</td>
+      <td><%= a_post.title %></td>
+      <td><%= a_post.body %></td>
+      <td><%= a_post.created_at.strftime("%b %e, %Y") %></td>
+      <td><%= a_post.expires_on.strftime("%b %e, %Y") %></td>
     </tr>
+    <% end %>
 </table>
