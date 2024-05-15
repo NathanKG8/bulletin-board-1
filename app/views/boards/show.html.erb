@@ -55,7 +55,7 @@
     <th>Posted on</th>
     <th>Expires on</th>
   </tr>
-   <% @matching_posts.each do |a_post| %>
+   <% @unexpired_posts.each do |a_post| %>
     <tr>
       <td><%= a_post.title %></td>
       <td><%= a_post.body %></td>
@@ -74,7 +74,7 @@
     <th>Posted on</th>
     <th>Expires on</th>
   </tr>
-   <% @matching_posts.each do |a_post| %>
+   <% @expired_posts.each do |a_post| %>
     <tr>
       <td><%= a_post.title %></td>
       <td><%= a_post.body %></td>
